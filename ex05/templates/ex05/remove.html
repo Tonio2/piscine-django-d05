@@ -1,0 +1,15 @@
+<html>
+
+<body>
+  {% if movies %}
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" name="remove">Remove</button>
+  </form>
+  {% else %}
+  <p>No data available.</p>
+  {% endif %}
+</body>
+
+</html>
